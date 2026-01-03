@@ -132,7 +132,7 @@ const generateArray = (size = arraySize) => {
         <div className="size-control">
           <label>Size: {arraySize}</label>
           <input 
-            type="range" min="10" max="40" step="5" 
+            type="range" min="10" max="50" step="5" 
             value={arraySize} onChange={handleSizeChange} disabled={isSorting} 
           />
         </div>
