@@ -65,7 +65,7 @@ const generateArray = (size = arraySize) => {
     setActiveIndices([])
 
     try {
-      const response = await axios.post('/api/sort', {
+      const response = await axios.post('https://sorting-backend.onrender.com/sort', {
         array: array,
         algorithm: algorithm
       })

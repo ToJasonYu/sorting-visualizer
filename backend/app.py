@@ -2,9 +2,6 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import sorting_algorithms
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-import sorting_algorithms
-
 app = Flask(__name__)
 CORS(app) 
 
@@ -51,5 +48,5 @@ def sort_array():
 
     return jsonify({"steps": steps})
 
-#if __name__ == '__main__':
-#    app.run(debug=True, host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
