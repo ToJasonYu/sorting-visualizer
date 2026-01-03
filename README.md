@@ -13,7 +13,7 @@ A web application with frontend + backend, designed to visualize how classic sor
 * **Decoupled Architecture:** The sorting logic resides entirely on the Python backend, sending animation steps to the React frontend via a REST API.
 * **Speed & Size Control:** Interactive sliders to adjust array size and visualization speed.
 * **Complexity Analysis:** Displays Time and Space complexity (Big O) for the selected algorithm.
-* **Code Viewer:** View the actual Python implementation code side-by-side with the visualizer.
+* **Code Viewer:** View the actual implementation code for each algorithm in Python, Java, and JavaScript.
 
 ## 🛠️ Tech Stack
 
