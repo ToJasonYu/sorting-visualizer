@@ -2,6 +2,9 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import sorting_algorithms
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+import sorting_algorithms
+
 app = Flask(__name__)
 CORS(app) 
 
