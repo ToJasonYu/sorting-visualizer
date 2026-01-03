@@ -4,7 +4,7 @@
 
 A web application with frontend + backend, designed to visualize how classic sorting algorithms work in real-time. This project is architected with a **React** frontend for dynamic rendering and a separate **Python (Flask)** backend to handle the algorithmic logic, demonstrating a clean client-server separation.
 
-![Project Screenshot](demo.png)
+![Project Screenshot](<img width="1850" height="1001" alt="image" src="https://github.com/user-attachments/assets/82756bd4-4d37-4eeb-be55-60f870a1890e" />)
 
 ## 🚀 Key Features
 
