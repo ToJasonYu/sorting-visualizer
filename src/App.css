@@ -1,0 +1,219 @@
+/* 1. Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Global Page Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #dee8f1;
+  color: #333;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+  /* Allow scrolling if absolutely necessary, but try to fit content first */
+  overflow-x: auto; 
+}
+
+/* 3. Main Container */
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem; /* Simplified padding for mobile */
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Ensure the root container doesn't force a width larger than the screen */
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Montserrat', 'Verdana', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.8rem; /* Slightly smaller font on mobile */
+}
+
+/* 4. Controls: Flex Wrap is Key */
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px; /* Reduced gap */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows buttons to stack on top of each other */
+  width: 100%;
+}
+
+.size-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-left: 0; /* Removed left margin for better centering */
+}
+
+button {
+  padding: 10px 15px; /* Slightly smaller padding */
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  flex-shrink: 0; /* Prevents buttons from getting squashed */
+}
+
+select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  max-width: 100%; /* Prevents dropdown from overflowing */
+}
+
+/* 5. Layout Wrapper */
+.layout-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 6. Visualizer Container: The Critical Fix */
+.visualizer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Flexible height: Taller on desktop, shorter on mobile */
+  height: 300px; 
+  width: 100%; /* Force it to fit the parent */
+  border: 1px solid #444;
+  background-color: #222;
+  padding: 5px; /* Reduced padding */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Desktop Override for Height */
+@media (min-width: 600px) {
+  .visualizer-container {
+    height: 420px; /* Original height for bigger screens */
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.bar {
+  margin: 0 1px;
+  background-color: #00d8ff;
+  transition: height 0.1s ease;
+  border-radius: 4px 4px 0 0;
+  flex: 1;
+}
+
+.bar.completed {
+  background-color: #2ecc71 !important;
+}
+
+.bar.active {
+  background-color: #d63384;
+}
+
+/* 7. Complexity Info */
+.complexity-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Reduced gap */
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0 auto;
+  color: #ccc;
+  width: 100%; /* Fit width */
+  max-width: 600px; /* Don't get too wide */
+  flex-wrap: wrap; /* Stack text if needed */
+}
+
+.complexity-info p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.section-title {
+  text-align: left;
+  color: black;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.code-section {
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 800px;
+  margin-left: 0;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  border: 1px solid #444;
+  overflow: hidden;
+  text-align: left;
+}
+
+.language-tabs {
+  display: flex;
+  background-color: #252526;
+  border-bottom: 1px solid #444;
+  overflow-x: auto;
+}
+
+.lang-tab {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  color: #ccc;
+  cursor: pointer;
+  border-right: 1px solid #333;
+  font-family: monospace;
+  white-space: nowrap;
+}
+
+.lang-tab:hover {
+  background-color: #333;
+}
+
+.lang-tab.active {
+  background-color: #1e1e1e;
+  color: #646cff;
+  font-weight: bold;
+  border-top: 2px solid #646cff;
+}
+
+.code-display {
+  padding: 15px;
+  margin: 0;
+  overflow-x: auto;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #d4d4d4;
+  min-height: 250px;
+}
+
+@media (max-width: 600px) {
+  .code-display {
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+}
