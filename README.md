@@ -1,16 +1,37 @@
-# React + Vite
+# 📊 Sorting Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### [🔴 Live Demo](https://sorting-visualizer.onrender.com)
 
-Currently, two official plugins are available:
+A web application with frontend + backend, designed to visualize how classic sorting algorithms work in real-time. This project is architected with a **React** frontend for dynamic rendering and a separate **Python (Flask)** backend to handle the algorithmic logic, demonstrating a clean client-server separation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Project Screenshot](demo.png)
 
-## React Compiler
+## 🚀 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **10 Different Algorithms:** Visualizes a wide range of sorting methods, from standard efficient algorithms (Quick Sort, Merge Sort) to educational ones (Bubble Sort, Gnome Sort).
+* **Real-Time Animations:** Watch the array sort step-by-step with color-coded states (Active, Locked, Unsorted).
+* **Decoupled Architecture:** The sorting logic resides entirely on the Python backend, sending animation steps to the React frontend via a REST API.
+* **Speed & Size Control:** Interactive sliders to adjust array size and visualization speed.
+* **Complexity Analysis:** Displays Time and Space complexity (Big O) for the selected algorithm.
+* **Code Viewer:** View the actual Python implementation code side-by-side with the visualizer.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React.js, Vite, CSS3
+* **Backend:** Python 3, Flask, CORS
+* **Deployment:** Render (Separate services for Static Site and Web Service)
+* **Communication:** REST API (Axios)
+
+## 📂 Project Structure
+
+This project follows a professional separation of concerns:
+
+```bash
+/
+├── frontend/         # React Client (UI & Animation Logic)
+│   ├── src/          # Components, hooks, and styles
+│   └── dist/         # Production build artifacts
+├── backend/          # Python API (Server & Algorithms)
+│   ├── app.py        # Flask entry point
+│   └── sorting_algorithms.py # Pure Python implementations
+└── README.md
