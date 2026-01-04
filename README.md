@@ -1,6 +1,6 @@
 # 📊 Sorting Visualizer
 
-### [🔴 Live Demo](https://sorting-visualizer.onrender.com)
+### [🔴 Live Demo](https://sorting-visualizer-kwqp.onrender.com/)
 
 A web application with frontend + backend, designed to visualize how classic sorting algorithms work in real-time. This project is architected with a **React** frontend for dynamic rendering and a separate **Python (Flask)** backend to handle the algorithmic logic, demonstrating a clean client-server separation.
 
